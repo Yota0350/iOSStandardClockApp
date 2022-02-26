@@ -13,6 +13,10 @@
 		95BA8DE627CA00E300C851F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BA8DE427CA00E300C851F5 /* Main.storyboard */; };
 		95BA8DE827CA00E600C851F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95BA8DE727CA00E600C851F5 /* Assets.xcassets */; };
 		95BA8DEB27CA00E600C851F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BA8DE927CA00E600C851F5 /* LaunchScreen.storyboard */; };
+		95BA8DF427CA073B00C851F5 /* WorldClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BA8DF327CA073B00C851F5 /* WorldClockViewController.swift */; };
+		95BA8DF627CA074B00C851F5 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BA8DF527CA074B00C851F5 /* TimerViewController.swift */; };
+		95BA8DF827CA075E00C851F5 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BA8DF727CA075E00C851F5 /* AlarmViewController.swift */; };
+		95BA8DFA27CA077600C851F5 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BA8DF927CA077600C851F5 /* StopWatchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		95BA8DE727CA00E600C851F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95BA8DEA27CA00E600C851F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95BA8DEC27CA00E600C851F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95BA8DF327CA073B00C851F5 /* WorldClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockViewController.swift; sourceTree = "<group>"; };
+		95BA8DF527CA074B00C851F5 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		95BA8DF727CA075E00C851F5 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		95BA8DF927CA077600C851F5 /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		95BA8DDD27CA00E300C851F5 /* iOSStandardClockApp */ = {
 			isa = PBXGroup;
 			children = (
+				95BA8DF227CA072300C851F5 /* View */,
 				95BA8DDE27CA00E300C851F5 /* AppDelegate.swift */,
 				95BA8DE027CA00E300C851F5 /* SceneDelegate.swift */,
 				95BA8DE227CA00E300C851F5 /* ViewController.swift */,
@@ -65,6 +74,17 @@
 				95BA8DEC27CA00E600C851F5 /* Info.plist */,
 			);
 			path = iOSStandardClockApp;
+			sourceTree = "<group>";
+		};
+		95BA8DF227CA072300C851F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95BA8DF327CA073B00C851F5 /* WorldClockViewController.swift */,
+				95BA8DF527CA074B00C851F5 /* TimerViewController.swift */,
+				95BA8DF727CA075E00C851F5 /* AlarmViewController.swift */,
+				95BA8DF927CA077600C851F5 /* StopWatchViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +158,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95BA8DF627CA074B00C851F5 /* TimerViewController.swift in Sources */,
+				95BA8DF427CA073B00C851F5 /* WorldClockViewController.swift in Sources */,
+				95BA8DF827CA075E00C851F5 /* AlarmViewController.swift in Sources */,
 				95BA8DE327CA00E300C851F5 /* ViewController.swift in Sources */,
 				95BA8DDF27CA00E300C851F5 /* AppDelegate.swift in Sources */,
+				95BA8DFA27CA077600C851F5 /* StopWatchViewController.swift in Sources */,
 				95BA8DE127CA00E300C851F5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

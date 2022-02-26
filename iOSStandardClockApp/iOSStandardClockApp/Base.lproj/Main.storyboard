@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fgT-ZY-Itm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -28,42 +28,42 @@
             </objects>
             <point key="canvasLocation" x="-295" y="101"/>
         </scene>
-        <!--Item-->
+        <!--タイマー-->
         <scene sceneID="WWk-TM-ZIv">
             <objects>
-                <viewController id="R49-ag-Qs5" sceneMemberID="viewController">
+                <viewController id="R49-ag-Qs5" customClass="TimerViewController" customModule="iOSStandardClockApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1fP-dr-ybo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Qgx-sJ-srG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="DDB-id-tWs"/>
+                    <tabBarItem key="tabBarItem" title="タイマー" image="timer" catalog="system" id="DDB-id-tWs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NwQ-El-I8D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="983" y="830"/>
         </scene>
-        <!--Item-->
+        <!--ストップウォッチ-->
         <scene sceneID="7NL-qf-mvR">
             <objects>
-                <viewController id="557-hs-1GS" sceneMemberID="viewController">
+                <viewController id="557-hs-1GS" customClass="StopWatchViewController" customModule="iOSStandardClockApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QhX-8f-Dld">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="CjL-J1-l9v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="4fm-wi-2Bo"/>
+                    <tabBarItem key="tabBarItem" title="ストップウォッチ" image="stopwatch.fill" catalog="system" id="4fm-wi-2Bo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfS-QK-gYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="345" y="830"/>
         </scene>
-        <!--View Controller-->
+        <!--Alarm View Controller-->
         <scene sceneID="Ahs-S1-9wu">
             <objects>
-                <viewController id="O9N-GT-wsV" sceneMemberID="viewController">
+                <viewController id="O9N-GT-wsV" customClass="AlarmViewController" customModule="iOSStandardClockApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t4D-6b-UEi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,15 +76,41 @@
             </objects>
             <point key="canvasLocation" x="-297" y="1524"/>
         </scene>
-        <!--View Controller-->
+        <!--World Clock View Controller-->
         <scene sceneID="RhU-7g-hO5">
             <objects>
-                <viewController id="eem-wt-ScF" sceneMemberID="viewController">
+                <viewController id="eem-wt-ScF" customClass="WorldClockViewController" customModule="iOSStandardClockApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TwO-Xh-Tbg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8uS-BO-b2U">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WorldClockViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorldClockViewCell" id="Fgv-wJ-tER">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fgv-wJ-tER" id="IzC-iN-IGL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="eem-wt-ScF" id="qh4-zr-eC8"/>
+                                    <outlet property="delegate" destination="eem-wt-ScF" id="iSM-6x-Qcd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0KK-zg-zuJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8uS-BO-b2U" firstAttribute="top" secondItem="0KK-zg-zuJ" secondAttribute="top" id="cW2-zV-4CL"/>
+                            <constraint firstItem="0KK-zg-zuJ" firstAttribute="bottom" secondItem="8uS-BO-b2U" secondAttribute="bottom" id="kua-SR-z0j"/>
+                            <constraint firstItem="8uS-BO-b2U" firstAttribute="leading" secondItem="0KK-zg-zuJ" secondAttribute="leading" id="lfP-6D-Pcl"/>
+                            <constraint firstItem="0KK-zg-zuJ" firstAttribute="trailing" secondItem="8uS-BO-b2U" secondAttribute="trailing" id="ukz-DH-crG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tT6-fA-lxM"/>
                 </viewController>
@@ -92,11 +118,11 @@
             </objects>
             <point key="canvasLocation" x="-936" y="1524"/>
         </scene>
-        <!--Item-->
+        <!--世界時計-->
         <scene sceneID="aed-2B-LTA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a1u-XZ-voe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="XAV-lP-JGl"/>
+                    <tabBarItem key="tabBarItem" title="世界時計" image="globe" catalog="system" id="XAV-lP-JGl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="chg-83-2mj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -111,11 +137,11 @@
             </objects>
             <point key="canvasLocation" x="-936.23188405797111" y="829.6875"/>
         </scene>
-        <!--Item-->
+        <!--アラーム-->
         <scene sceneID="Iro-an-5BQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UQQ-I7-7GN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ASq-au-UBU"/>
+                    <tabBarItem key="tabBarItem" title="アラーム" image="alarm.fill" catalog="system" id="ASq-au-UBU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZN3-y0-udJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -132,6 +158,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="alarm.fill" catalog="system" width="124" height="128"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="stopwatch.fill" catalog="system" width="121" height="128"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
