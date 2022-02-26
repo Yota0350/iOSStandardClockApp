@@ -8,6 +8,17 @@
 import UIKit
 
 class WorldClockViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
+    let items = ["東京", "アクトン", "アシガバード"]
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "WorldClockViewCell", for:indexPath)
+        cell.textLabel!.text = items[indexPath.row]
+        return cell
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
