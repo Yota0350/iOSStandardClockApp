@@ -113,10 +113,29 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tT6-fA-lxM"/>
+                    <connections>
+                        <segue destination="cCf-w0-u9r" kind="presentation" identifier="ToAddWorldClockView" id="hLS-dz-iGm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qN-iT-FZ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-936" y="1524"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4pR-Lx-EyN">
+            <objects>
+                <viewController id="cCf-w0-u9r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0RD-4b-MNB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6GF-29-gry"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tvh-Cr-wPT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7V1-lO-WiM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-936" y="2231"/>
         </scene>
         <!--世界時計-->
         <scene sceneID="aed-2B-LTA">
@@ -130,7 +149,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="eem-wt-ScF" kind="relationship" relationship="rootViewController" id="3zB-Wa-3yg"/>
+                        <segue destination="eem-wt-ScF" kind="relationship" relationship="rootViewController" id="ois-c0-vbl"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mbm-6K-jwQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

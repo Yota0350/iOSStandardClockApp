@@ -22,19 +22,29 @@ class WorldClockViewController: UIViewController , UITableViewDelegate, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupNavigationItem()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupNavigationItem(){
+        self.navigationItem.title = "世界時計"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(addButtonTapped(_:))
+        )
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "編集",
+            style: .done,
+            target: self,
+            action: #selector(editButtonTapped(_:))
+        )
     }
-    */
-
+    
+    @objc func addButtonTapped(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "ToAddWorldClockView", sender: nil)
+    }
+    
+    @objc func editButtonTapped(_ sender: UIBarButtonItem) {
+        print("編集ボタンタップ")
+    }
 }
