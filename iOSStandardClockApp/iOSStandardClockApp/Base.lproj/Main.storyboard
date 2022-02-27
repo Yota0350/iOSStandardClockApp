@@ -114,6 +114,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="tT6-fA-lxM"/>
                     <connections>
+                        <outlet property="tableView" destination="8uS-BO-b2U" id="F8X-CN-qLo"/>
                         <segue destination="cCf-w0-u9r" kind="presentation" identifier="ToAddWorldClockView" id="hLS-dz-iGm"/>
                     </connections>
                 </viewController>

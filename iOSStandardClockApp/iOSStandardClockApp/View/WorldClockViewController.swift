@@ -8,7 +8,8 @@
 import UIKit
 
 class WorldClockViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
-    let items = ["東京", "アクトン", "アシガバード"]
+    @IBOutlet var tableView: UITableView!
+    var items = ["東京", "アクトン", "アシガバード"]
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -17,6 +18,12 @@ class WorldClockViewController: UIViewController , UITableViewDelegate, UITableV
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "WorldClockViewCell", for:indexPath)
         cell.textLabel!.text = items[indexPath.row]
         return cell
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        tableView.setEditing(editing, animated: animated)
+        tableView.isEditing = editing
     }
     
 
@@ -32,12 +39,18 @@ class WorldClockViewController: UIViewController , UITableViewDelegate, UITableV
             target: self,
             action: #selector(addButtonTapped(_:))
         )
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
-            title: "編集",
-            style: .done,
-            target: self,
-            action: #selector(editButtonTapped(_:))
-        )
+        self.navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        commit editingStyle: UITableViewCell.EditingStyle,
+        forRowAt indexPath: IndexPath
+    ){
+        if editingStyle == .delete{
+            items.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
     
     @objc func addButtonTapped(_ sender: UIBarButtonItem) {
@@ -45,6 +58,6 @@ class WorldClockViewController: UIViewController , UITableViewDelegate, UITableV
     }
     
     @objc func editButtonTapped(_ sender: UIBarButtonItem) {
-        print("編集ボタンタップ")
+        //setEditing(true, animated: false)
     }
 }
